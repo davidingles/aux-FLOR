@@ -6,7 +6,7 @@ import { useControls } from 'leva';
 
 const Models = [
   { title: 'SOY', url: './SOY.glb', miEscala: 1.1, miPosicion: 4 },
-  { title: 'SOY1', url: './SOY1.glb', miEscala: 1.1, miPosicion: 4 },
+  // { title: 'SOY1', url: './SOY1.glb', miEscala: 1.1, miPosicion: 4 },
   // { title: '5KG', url: './5KG.glb', miEscala: 1.1, miPosicion: 4 },
   // { title: '6KG', url: './6KG.glb', miEscala: 1.1, miPosicion: 4 },
   // { title: '7KG', url: './7KG.glb', miEscala: 1.1, miPosicion: 4 },
@@ -64,12 +64,12 @@ export default function EstucheConAsas({ title }) {
 
   return (
     <Canvas camera={{ position: [0.5, 0.4, -0.6], near: 0.1, fov: 70 }}>
-      <ambientLight intensity={1} /> {/* Aumentar la luz global */}
-      <pointLight position={[100, 100, 0]} intensity={33333} decay={2} />
-      <pointLight position={[-100, 100, 0]} intensity={33333} decay={2} />
-      <pointLight position={[-100, 100, 100]} intensity={33333} decay={2} />
-      <pointLight position={[100, -100, -100]} intensity={99999} decay={2} />
-      <pointLight position={[100, -100, 100]} intensity={99999} decay={2} />
+      <ambientLight intensity={0.6} />
+      <pointLight position={[30, 50, 10]} intensity={17000} decay={2} />
+      <pointLight position={[-30, 45, 5]} intensity={15000} decay={2} />
+      <pointLight position={[-28, 40, 45]} intensity={14000} decay={2} />
+      <pointLight position={[25, -35, -20]} intensity={13000} decay={2} />
+      <pointLight position={[22, -30, 35]} intensity={13000} decay={2} />
       <Suspense fallback={<Fallback />}>
         {modelUrl && <Model url={modelUrl} miEscala={modelEscala} miPosicion={modelPosicion} />}
       </Suspense>
