@@ -64,7 +64,8 @@ export default function EstucheConAsas({ title }) {
 
   return (
     <Canvas camera={{ position: [0.5, 0.4, -0.6], near: 0.1, fov: 70 }}>
-      <ambientLight intensity={0.6} />
+      <ambientLight intensity={0.3} />
+      <hemisphereLight skyColor={'#ffffff'} groundColor={'#444444'} intensity={0.35} />
       <pointLight position={[30, 50, 10]} intensity={17000} decay={2} />
       <pointLight position={[-30, 45, 5]} intensity={15000} decay={2} />
       <pointLight position={[-28, 40, 45]} intensity={14000} decay={2} />
